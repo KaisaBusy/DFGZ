@@ -1,0 +1,35 @@
+﻿<Window x:Class="DFGZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="代发工资数据包自动生成工具" Height="386.735" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="204*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="377*"/>
+            <ColumnDefinition Width="140*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="filePathText" HorizontalAlignment="Left" Height="23" Margin="20,37,0,0" TextWrapping="Wrap" Text="待解析文件路径" VerticalAlignment="Top" Width="347"/>
+        <Button x:Name="getFile" Content="获取路径" HorizontalAlignment="Left" Margin="19,39,0,0" VerticalAlignment="Top" Width="75" Click="getFile_Click" Grid.Column="1"/>
+        <Button x:Name="analysisFile" Content="分析文件" HorizontalAlignment="Right" Margin="0,182.94,258,0" VerticalAlignment="Top" Width="75" Click="analysisFile_Click" Grid.Row="1" Height="26.383"/>
+        <Button x:Name="save" Content="获取路径" Grid.Column="1" HorizontalAlignment="Left" Margin="19,76,0,0" VerticalAlignment="Top" Width="75" Click="save_Click"/>
+        <TextBox x:Name="savePathText" HorizontalAlignment="Left" Height="23" Margin="20,73,0,0" TextWrapping="Wrap" Text="解析后文件保存路径" VerticalAlignment="Top" Width="347"/>
+        <TextBox x:Name="saveFileName" HorizontalAlignment="Left" Height="23" Margin="20,109,0,0" TextWrapping="Wrap" Text="解析后文件名" VerticalAlignment="Top" Width="347" Grid.RowSpan="2"/>
+        <TextBox x:Name="jinE1" HorizontalAlignment="Left" Height="36" Margin="63,30.68,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="120" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="jinE" Content="金额" HorizontalAlignment="Left" Margin="13,30.68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" FontSize="16" />
+        <TextBox x:Name="renshu" HorizontalAlignment="Left" Height="36" Margin="250,30.68,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="renShu" Content="人数" HorizontalAlignment="Left" Margin="195,30.68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36" FontSize="16" />
+        <TextBox x:Name="OutTxtBox" HorizontalAlignment="Left" Height="84.245" Margin="67.429,82.493,0,0" Grid.Row="1" TextWrapping="Wrap" Text="程序正在运行。。。" VerticalAlignment="Top" Width="354.59" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" UndoLimit="2000" Foreground="#FFF10A0A">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.027"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+    </Grid>
+</Window>
